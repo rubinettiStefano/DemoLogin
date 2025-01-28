@@ -9,4 +9,6 @@ import java.util.Optional;
 public interface UtenteRepository extends JpaRepository<Utente, Long>
 {
 	Optional<Utente> findByUsernameAndHashedPassword(String username, String hashedPassword);
+
+	Optional<Utente> findByUsername(String username);
 }
